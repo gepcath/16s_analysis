@@ -23,6 +23,11 @@ This repository contains Jupyter notebooks for:
    - Builds a bipartite species ↔ functional-category network
    - Exports summary tables (species → pathway and pathway → species)
 
+4. **Alpha diversity summary** (`shannon_mean_std.ipynb`)
+   - Computes per-sample Shannon diversity from the raw abundance table
+   - Reports mean ± SD Shannon index and sample count
+   - Performs Kruskal–Wallis test for group comparisons
+
 ## Repository structure
 
 ```
@@ -30,6 +35,7 @@ This repository contains Jupyter notebooks for:
 ├── new_big_font_no_kegg.ipynb    # Core microbiome profiling
 ├── kegg.ipynb                    # KEGG API data retrieval
 ├── kegg2.ipynb                   # KEGG pathway network analysis
+├── shannon_mean_std.ipynb        # Alpha diversity (Shannon) summary
 ├── requirements.txt              # Python dependencies
 └── README.md
 
@@ -99,6 +105,7 @@ Run the notebooks in order:
 1. `new_big_font_no_kegg.ipynb` — core profiling
 2. `kegg.ipynb` — fetches KEGG data (requires internet; generates intermediate CSVs in `../results/`)
 3. `kegg2.ipynb` — pathway network analysis
+4. `shannon_mean_std.ipynb` — Shannon diversity summary statistics
 
 Make sure the `../data/` directory with the required input files is in place before running.
 
